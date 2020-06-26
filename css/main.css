@@ -1,4 +1,9 @@
 /**** common ****/
+
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -40,19 +45,36 @@ a {
   transition: 0.5s;
 }
 
-/**** home ****/
+/**** main ****/
 
-.home article {
+main {
   margin: auto;
   max-width: 750px;
 }
 
-.home article h1 {
+main h1 {
   text-align: center;
 }
 
-.home article .home--img {
+main section {
+  margin: 2.4em 0;
+}
+
+/**** home ****/
+
+.home main .home--img {
   width: 100%;
   height: 400px;
   background: url("../img/stock-room.jpg") no-repeat center center;
+}
+
+/**** about ****/
+
+.about main .team .team-member {
+  display: flex;
+  margin: 2.4em 0;
+}
+
+.about main .team .team-member > div {
+  padding: 0.5em 1.5em;
 }
