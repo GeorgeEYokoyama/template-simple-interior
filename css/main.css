@@ -1,0 +1,58 @@
+/**** common ****/
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**** site-nav ****/
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1em;
+}
+
+.site-nav ul a  {
+  color: black;
+}
+
+.site-nav ul a li {
+  padding: 1.6em 1.6em;
+}
+
+.site-nav ul a li:hover {
+  background-color: lightgrey;
+  transition: 0.5s;
+}
+
+/**** home ****/
+
+.home article {
+  margin: auto;
+  max-width: 750px;
+}
+
+.home article h1 {
+  text-align: center;
+}
+
+.home article .home--img {
+  width: 100%;
+  height: 400px;
+  background: url("../img/stock-room.jpg") no-repeat center center;
+}
