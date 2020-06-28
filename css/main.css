@@ -130,12 +130,12 @@ main section {
 
 /**** about ****/
 
-.about main .team .team-member {
+.about main section.team .team-member {
   display: flex;
   margin: 2.4em 0;
 }
 
-.about main .team .team-member > div {
+.about main section.team .team-member > div {
   padding: 0.5em 1.5em;
 }
 
@@ -145,13 +145,36 @@ main section {
   max-width: 1366px;
 }
 
-.gallery main article .grid-container {
+.gallery main section .grid-container {
   padding: 1em;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 1em;
 }
 
-.gallery main article .grid-container img {
+.gallery main section .grid-container img {
   width: 100%;
+}
+
+/**** contact ****/
+
+.contact main section .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact main section .contact-form input {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.contact main section .contact-form textarea {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.contact main section .contact-form button {
+  font-size: 1.2em;
+  margin: 5px 0;
+  height: 2.5em;
 }
