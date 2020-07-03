@@ -21,26 +21,114 @@ a {
 
 /**** site-nav ****/
 
-.site-nav ul {
+.site-nav input.site-nav__toggle-state {
+  display: none;
+}
+
+.site-nav input.site-nav__toggle-state:checked ~ ul.site-nav__list {
+  visibility: visible;
+  opacity: 1;
+  background-color: ghostwhite;
+}
+
+.site-nav label.site-nav__toggle {
+  right: 10px;
+  top: 10px;
+  position: fixed;
+  z-index: 10;
+  height: 2.5em;
+  width: 2.5em;
+  background-color: #ddd;
+}
+
+.site-nav input.site-nav__toggle-state:checked ~ label.site-nav__toggle span {
+  background-color: transparent;
+}
+
+.site-nav input.site-nav__toggle-state:checked ~ label.site-nav__toggle span:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.site-nav input.site-nav__toggle-state:checked ~ label.site-nav__toggle span:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.site-nav label.site-nav__toggle:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.site-nav label.site-nav__toggle span:before,
+.site-nav label.site-nav__toggle span:after,
+.site-nav label.site-nav__toggle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.site-nav label.site-nav__toggle span {
+  width: 58%;
+}
+
+.site-nav label.site-nav__toggle span:before {
+  content: '';
+  transform: translate(-50%, -12px);
+}
+
+.site-nav label.site-nav__toggle span:after {
+  content: '';
+  transform: translate(-50%, 9px);
+}
+
+.site-nav ul.site-nav__list {
+  visibility: hidden;
+  opacity: 0;
   list-style: none;
+  height: 100%;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 10% 20%;
   display: flex;
-  justify-content: center;
-  font-size: 1.1em;
+  flex-direction: column;
+  position: fixed;
+  background-color: white;
+  transition: 0.3s;
 }
 
-.site-nav ul a  {
+.site-nav ul li  {
+  margin: 0.5em 0;
+}
+
+.site-nav ul li a  {
   color: black;
+  display: block;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0.6em 3em;
 }
 
-.site-nav ul a li {
-  padding: 1.6em 1.6em;
-}
 
-.site-nav ul a li:hover {
-  background-color: lightgrey;
-  transition: 0.5s;
+@media only screen and (min-width: 1024px) {
+  .site-nav ul {
+    justify-content: center;
+    font-size: 1.1em;
+  }
+
+  .site-nav ul a li {
+    padding: 1.6em 1.6em;
+  }
+
+  .site-nav ul a li:hover {
+    background-color: lightgrey;
+    transition: 0.5s;
+  }
 }
 
 /**** site-footer ****/
@@ -57,7 +145,7 @@ a {
 /**** main ****/
 
 main {
-  margin: 2.4em auto;
+  padding: 2.4em 0;
   max-width: 750px;
 }
 
