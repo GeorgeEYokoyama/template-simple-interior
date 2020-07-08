@@ -174,65 +174,14 @@ main section {
 }
 
 .services main article .service {
-  position: relative;
-  height: 350px;
-  margin: 150px 0;
-}
-
-.services main article .service .content-bg {
-  position: absolute;
-  height: 100%;
-  width: 600px;
-  opacity: 0.6;
-}
-
-.services main article .service .content-bg.bg-1 {
-  background: url("../img/shower.jpg") no-repeat center center;
-}
-
-.services main article .service .content-bg.bg-2 {
-  background: url("../img/bathroom.jpg") no-repeat center center;
-}
-
-.services main article .service .content-bg.bg-3 {
-  background: url("../img/kitchen.jpg") no-repeat center center;
-}
-
-.services main article .service .content-bg.bg-4 {
-  background: url("../img/lounge.jpg") no-repeat center center;
+  margin: 2.4em 0 0;
 }
 
 .services main article .service .content {
-  position: absolute;
-  width: 50%;
   font-size: 1.1em;
 }
 
-.services main article .service:nth-child(odd) .content-bg {
-  right: 0;
-}
-
-.services main article .service:nth-child(odd) .content {
-  top: 0;
-  left: 0;
-  transform: translate(0, 25%);
-}
-
-.services main article .service:nth-child(even) .content-bg {
-  left: 0;
-}
-
-.services main article .service:nth-child(even) .content {
-  top: 0;
-  right: 0;
-  transform: translate(0, 25%);
-}
-
 /**** about ****/
-
-.about main section {
-  margin: 2.4em 0;
-}
 
 .about main section.team .team-member {
   display: flex;
