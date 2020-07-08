@@ -201,9 +201,8 @@ main section {
 }
 
 .gallery main section .grid-container {
-  padding: 1em;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   grid-gap: 1em;
 }
 
