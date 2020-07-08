@@ -134,6 +134,7 @@ a {
 /**** site-footer ****/
 
 .site-footer {
+  background-color: ghostwhite;
   text-align: center;
   font-size: 1.1em;
 }
@@ -155,6 +156,7 @@ main h1 {
 
 main section {
   margin: 2.4em 0;
+  padding: 0 1.2em;
 }
 
 /**** home ****/
@@ -229,16 +231,18 @@ main section {
 /**** about ****/
 
 .about main section {
-  margin: 100px 0;
+  margin: 2.4em 0;
 }
 
 .about main section.team .team-member {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 2.4em 0;
 }
 
 .about main section.team .team-member > div {
-  padding: 0.5em 1.5em;
+  padding: 0.5em 0;
 }
 
 /**** gallery ****/
