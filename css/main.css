@@ -134,18 +134,26 @@ a {
 /**** site-footer ****/
 
 .site-footer {
+  min-height: 10vh;
   background-color: ghostwhite;
-  text-align: center;
   font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-footer > div {
   padding: 1.6em 0;
 }
 
-/**** main ****/
+/**** container & main ****/
+
+.container {
+  min-height: 90vh;
+}
 
 main {
+  margin: auto;
   padding: 2.4em 0;
   max-width: 750px;
 }
@@ -160,6 +168,11 @@ main section {
 }
 
 /**** home ****/
+
+.home main {
+  display: flex;
+  flex-direction: column;
+}
 
 .home main .home--img {
   width: 100%;
@@ -206,6 +219,18 @@ main section {
   grid-gap: 1em;
 }
 
+@media only screen and (min-width: 768px) {
+  .gallery main section .grid-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gallery main section .grid-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
 .gallery main section .grid-container img {
   width: 100%;
 }
@@ -218,17 +243,17 @@ main section {
 }
 
 .contact main section .contact-form input {
-  margin: 5px 0;
+  margin: 6px 0;
   font-size: 1.2em;
 }
 
 .contact main section .contact-form textarea {
-  margin: 5px 0;
+  margin: 6px 0;
   font-size: 1.1em;
 }
 
 .contact main section .contact-form button {
   font-size: 1.2em;
-  margin: 5px 0;
+  margin: 6px 0;
   height: 2.5em;
 }
